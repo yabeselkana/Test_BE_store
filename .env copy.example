@@ -1,0 +1,10 @@
+PGUSER = ahcgrhzz
+PGHOST = rosie.db.elephantsql.com
+PGDATABASE = ahcgrhzz
+PGPASSWORD = cx7hUMQoe-maq35boLoCCIe5mmmWQNpr
+PGPORT =  5432
+SECRETE_KEY_JWT = sadas1233
+
+CLOUD_NAME = dcp06hime
+API_KEY = 872134146683782
+API_SECRET = nESnmUdBjoz9z9EqKesi1iw4Gsg
