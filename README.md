@@ -6,7 +6,7 @@
     <a href="https://github.com/yabeselkana/Test_BE_store.git"><strong>Explore the docs »</strong></a>
     <br />
     ·
-    <a href="https://test-be-store.vercel.app/api/products >Api Demo</a>
+    <a href="https://test-be-store.vercel.app/api/products "> Api Demo </a>
   </p>
 </p>
 
