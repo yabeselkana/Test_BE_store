@@ -12,7 +12,7 @@ FROM products
 JOIN categorys
   ON products.id_category = categorys.id
 JOIN raks
-  ON products.id_locRak = raks.id  where 	name  ilike '%${keyword}%' ORDER BY ${sortby} ${sort} LIMIT ${limit} OFFSET ${offset}`);
+  ON products.id_locRak = raks.id  where 	raks.location  ilike '%${keyword}%' ORDER BY ${sortby} ${sort} LIMIT ${limit} OFFSET ${offset}`);
 };
 
 const selectSearchProduct = ({ keyword, sort }) => {

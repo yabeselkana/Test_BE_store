@@ -1,15 +1,12 @@
 <br />
 <p align="center">
-  <div align="center">
-      <h3 align="center">Artikel BE</h3>
-  </div>
-  <h3 align="center">Artikel</h3>
+
+  <h3 align="center">Test BE Store</h3>
   <p align="center">
-    <a href="https://github.com/yabeselkana/React_Articel_Be.git"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/yabeselkana/Test_BE_store.git"><strong>Explore the docs »</strong></a>
     <br />
-    <a href="https://react-articel-fe.vercel.app/">View Demo</a>
     ·
-    <a href="https://react-articel-be.vercel.app/https://react-articel-be.vercel.app/>Api Demo</a>
+    <a href="https://test-be-store.vercel.app/api/products >Api Demo</a>
   </p>
 </p>
 
@@ -39,13 +36,13 @@ These are the libraries and service used for building this backend API
 1. Clone this repository
 
 ```sh
-git clone https://github.com/yabeselkana/React_Articel_Be.git
+git clone https://github.com/yabeselkana/Test_BE_store.git
 ```
 
 2. Change directory to markisak-be
 
 ```sh
-cd HireJob-BE
+cd Store-BE
 ```
 
 3. Install all of the required modules
@@ -81,6 +78,126 @@ npm run dev
 npm run lint
 ```
 
+# Api documentation
+
+- users
+- products
+- categorys
+- raks
+- transaction
+
+### Register users
+
+```http
+  POST test-be-store.vercel.app/api/users/register
+```
+
+Req Body Form:
+| Key | Value |
+| :-------- |:------------------------- |
+| `email` | **Required**. email |
+| `name` | **Required**. name |
+| `phone` | **Required**. phone |
+| `password` | **Required**. password |
+| `confirmpasswordHash` | **Required**. confirmpasswordHash |
+
+---
+
+### Login
+
+```http
+  POST test-be-store.vercel.app/api/users/login
+```
+
+Req Body Form:
+| Key | Value |
+| :-------- | :------------------------- |
+| `email` | **Required**. email |
+| `password` | **Required**. password |
+
+---
+
+### Get all Product + Query
+
+```http
+  GET https://test-be-store.vercel.app/api/products ?search=''&searchBy=name&sortBy=created_at&sort=ASC
+```
+
+Query Params:
+| Key | Description | Default Value
+| :-------- | :------------------------- | :-------- |
+| `search` | search query |null
+| `searchBy` | search name |name
+| `sortBy`| sort created_at |created_at
+| `sort`| sort query |asc
+
+---
+
+### Get Product by Id
+
+```http
+ GET  https://test-be-store.vercel.app/api/products/:id
+```
+
+---
+
+### Input Product
+
+```http
+  POST https://test-be-store.vercel.app/api/products
+```
+
+Auth:
+|Key |Value |
+| :-------- |:------------------------- |
+| `bearer token` |**Required**. Login accessToken |
+Req Form-Data:
+| Key | Description | Default Value
+| :-------- | :------------------------- | :-------- |
+| `name` | Sepeda | ''
+| `stock` | 500 | ''
+| `price` |40000| ''
+| `id_category`| 1 | ''
+| `id_locRak`| 1| ''
+
+---
+
+### Update Product
+
+```http
+  PUT https://test-be-store.vercel.app/api/products/:id
+```
+
+````
+
+Auth:
+|Key |Value |
+| :-------- |:------------------------- |
+| `bearer token` |**Required**. Login accessToken |
+Req Form-Data:
+| Key | Description | Default Value
+| :-------- | :------------------------- | :-------- |
+| `name` | Sepeda | ''
+| `stock` | 500 | ''
+| `price` |40000| ''
+| `id_category`| 1 | ''
+| `id_locRak`| 1| ''
+
+
+
+### Delete Product
+
+```http
+  DELETE https://test-be-store.vercel.app/api/products/:id
+````
+
+Auth:
+|Key |Value |
+| :-------- |:------------------------- |
+| `bearer token` |**Required**. Login accessToken |
+
+---
+
 ## Documentation
 
 Documentation files are provided in the [docs](./docs) folder
@@ -90,16 +207,8 @@ Documentation files are provided in the [docs](./docs) folder
 
 API endpoint list are also available as published postman documentation
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://documenter.getpostman.com/view/26301439/2s9YJaZQRN)
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://documenter.getpostman.com/view/26301439/2s9YRCVqMa)
 
 ## Related Project
 
-:rocket: [`Backend Articel`](https://github.com/yabeselkana/React_Articel_Be.git)
-
-:rocket: [`Frontend Articel`](https://github.com/yabeselkana/React_Articel_FE.git)
-
-:rocket: [`Demo Articel`](https://react-articel-fe.vercel.app/)
-
-:rocket: [`Demo BE Articel`](https://react-articel-be.vercel.app/)
-
-<!-- Project link : [https://github.com/izaazwaskito/HireJob-BE](https://github.com/izaazwaskito/HireJob-BE) -->
+:rocket: [`Backend Store`](https://github.com/yabeselkana/Test_BE_store.git)
